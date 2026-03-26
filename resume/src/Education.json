@@ -1,0 +1,16 @@
+[
+  {
+    "Institution": "DigiPen institute of Technology",
+    "certification": "BcS Computer Science: Real-time Interactive Simulation",
+    "period": "April 2021 — October 2025",
+    "desc": "Graduate with honours with merit. Specialised in computer graphics.",
+    "tech": [ "C", "C++", "C# Mono", "OpenGL", "Vulkan", "Kotlin", "Babylon.js", "Parallel Progamming" ]
+  },
+  {
+    "Institution": "Singapore Polytechnic",
+    "certification": "Diploma in Computer Engineering",
+    "period": "April 2016 — April 2019",
+    "desc": "Specialised in computer network and application.",
+    "tech": [ "Arduino", "Networking", "Cisco", "Java" ]
+  }
+] 

@@ -1,0 +1,6 @@
+/.vs
+/node_modules
+*.sln
+*.cache
+*.esproj
+/resume/obj

@@ -1,0 +1,93 @@
+[
+  {
+    "id": 0,
+    "title": "Education",
+    "content": [
+      {
+        "id": 0,
+        "subtitle": "Bachelor of Science in Computer Science: Real-Time Interactive Simulation - DigiPen Institute of Technology, Singapore",
+        "p1": "September 2021 - April 2025",
+        "p2": "Graduated most recently with Honours with Merit."
+      },
+      {
+        "id": 1,
+        "subtitle": "Diploma in Computer Engineering - Singapore Polytechnic, Singapore",
+        "p1": "April 2016 - September 2018",
+        "p2": "Specialised in networking and cloud computing."
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Skills and Knowledge",
+    "content": [
+      {
+        "id": 0,
+
+        "subtitle": "Programming Languages:",
+        "p1": " ",
+        "p2": "C | C++ | C# | Javascript | React | PHP | HTML | CSS | LUA | HLSL | GLSL"
+      },
+      {
+        "id": 1,
+        "subtitle": "Tools:",
+        "p1": " ",
+        "p2": "OpenGL | Vulkan | FMOD | Assimp | Unity"
+      },
+      {
+        "id": 2,
+        "subtitle": "Protocols:",
+        "p1": " ",
+        "p2": "TCP | UDP | HTTP | gRPC | gRPC-web"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Work Experience",
+    "content": [
+      {
+        "id": 0,
+        "subtitle": "ST Engineering Training & Simulation, Singapore - Intern, Bachelor of Science in Computer Science: Real-Time Interactive Simulation",
+        "p1": "September 2024 - April 2025 ",
+        "p2": "Developed a web system for real-time monitoring and management of servers, workstations, and embedded devices. Collaborated with engineers to integrate real-time data collection, networking, and system reliability measures. Demonstrated company products to both local and international clients."
+      },
+      {
+        "id": 1,
+        "subtitle": "RansNet Singapore Pte Ltd, Singapore -  Intern, Diploma in Computer Engineering",
+        "p1": "September 2018 – February 2019",
+        "p2": "Involved in on-site projects and collaborated on the deployment of network systems. Set up and troubleshoot network devices. Partnered with various vendors such as UOB, Raffles Medical Group and M1 to deploy public network systems."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Other Achievements",
+    "content": [
+      {
+        "id": 0,
+        "subtitle": "President, Just Singers",
+        "p1": " ",
+        "p2": " "
+      },
+      {
+        "id": 1,
+        "subtitle": "Head of Programmes, Just Singers",
+        "p1": " ",
+        "p2": " "
+      },
+      {
+        "id": 2,
+        "subtitle": "A cappella championship 2022, Silver",
+        "p1": " ",
+        "p2": " "
+      },
+      {
+        "id": 3,
+        "subtitle": "Overseas Integrated Programme to Redmond, Washington, USA",
+        "p1": " ",
+        "p2": " "
+      }
+    ]
+  }
+]

@@ -1,0 +1,124 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.Container {
+    position: relative;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
+    top: 0;
+    align-items: center;
+    width: 100vw;
+    height: 94vh;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff50 #ffffff05;
+}
+
+.Overlay {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 94vh;
+}
+
+.Experiences, .More {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.Outro {
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}
+
+.OutroImage {
+    display: block;
+    width: 50%;
+    height: auto;
+    z-index: -1;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.buttons {
+    display:flex;
+    flex-direction:row;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 10px;
+    width: 100%;
+    background: #4cc9ff0f;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button.outline {
+    background: #ffffff0f;
+    backdrop-filter: blur(20px);
+    border: 2px solid #4cc9ff0f;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+h2 {
+    color: #44ccffa0;
+    margin: 0;
+}
+
+h3 {
+    color: #FFFFFF;
+    margin: 0;
+}
+h4 {
+    margin: 0;
+}
+

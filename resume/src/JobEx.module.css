@@ -1,0 +1,91 @@
+
+/* Page layout */
+.experiencepage {
+    min-height: 94vh;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 80px;
+    letter-spacing: 2px;
+}
+
+/* Timeline */
+.timeline {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    border-left: 2px solid rgba(255,255,255,0.15);
+}
+
+.timelineitem {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 60px;
+}
+
+.timelinedot {
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #2d5bff;
+    box-shadow: 0 0 15px #2d5bff;
+}
+
+/* Glass card */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #2d5bff;
+    box-shadow: 0 10px 40px #2d5bff30;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card h3 {
+    margin: 4px 0;
+    color: #7a9cff;
+    font-weight: 500;
+}
+
+.period {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.desc {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Tech tags */
+.tech {
+    margin-top: 16px;
+}
+
+.tech span {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 13px;
+    background: #2d5bff25;
+    border: 1px solid #2d5bff;
+}

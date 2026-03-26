@@ -1,0 +1,23 @@
+[
+  {
+    "company": "ST Engineering Training & Simulation Pte Ltd",
+    "role": "Software Engineer Intern",
+    "period": "September 2024 — April 2025",
+    "desc": "Developed a web system for real-time monitoring and management of servers, workstations, and embedded devices. Collaborated with engineers to integrate real-time data collection, networking, and system reliability measures. Demonstrated company products to both local and international clients.",
+    "tech": [ "ReactJS", "C#", "Python", "GRPC", "GRPC-Web", "JavaScript", "HTML" ]
+  },
+  {
+    "company": "RansNet Singapore Pte Ltd",
+    "role": "Network Engineer Intern",
+    "period": "September 2018 — April 2019",
+    "desc": "Involved in on-site projects and collaborated on the deployment of network systems. Set up and troubleshoot network devices. Partnered with various vendors such as UOB, Raffles Medical Group and M1 to deploy public network systems.",
+    "tech": [ "CMD Line", "Custom Scripts" ]
+  },
+  {
+    "company": "Victory Family Centre",
+    "role": "Broadcast Director",
+    "period": "2021 — current",
+    "desc": "Oversee live production for sunday church services and adhoc events to make sure the production runs smoothly and in sync. Produnction inscludes camera shots, sound engineering, and graphics projections",
+    "tech": [ "Blackmagic Atem Devices", "Midas32 Mixer", "Pro Presenter", "Resi"]
+  }
+]
