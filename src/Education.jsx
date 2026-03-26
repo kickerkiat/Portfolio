@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
+import jsonData from "./Education.json"
 import styles from "./Education.module.css";
 
 export default function Education() {
 
     const [Data, setData] = useState([]);
     useEffect(() => {
-        fetch('./src/Education.json')
-            .then(response => {
-                if (!response.ok) { throw new Error('Network response was not ok'); }
-                return response.json();
-            }).then(d => {
-                setData(d);
-            })
+        setData(jsonData);
     }, [])
     return (
         <div className={styles.experiencepage}>

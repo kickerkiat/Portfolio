@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
+import jsonData from "./JobEx.json"
 import styles from "./JobEx.module.css";
 
 export default function ExperiencePage() {
 
     const [Data, setData] = useState([]);
     useEffect(() => {
-        fetch('./src/JobEx.json')
-            .then(response => {
-                if (!response.ok) { throw new Error('Network response was not ok'); }
-                return response.json();
-            }).then(d => {
-                setData(d);
-            })
+        setData(jsonData);
     }, []);
 
     return (
