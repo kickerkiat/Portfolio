@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import './App.css' 
 import Header from './Header'
 import {Home} from './Home'
@@ -6,7 +6,7 @@ import Projects from './Projects'
 import JobEx from './JobEx'
 import Education from './Education'
 import Achievements from './Achievements'
-
+import initBackground from "./Graphics/Background01";
 function App() {
     const homeRef = useRef(null);
     const educationRef = useRef(null);
@@ -14,8 +14,17 @@ function App() {
     const experienceRef = useRef(null);
     const leadershipRef = useRef(null);
     const [visible, setVisible] = useState(false);
+    const canvasRef = useRef(null);
+
+    useEffect(() => {
+        if (!canvasRef.current) return;
+        const cleanup = initBackground(canvasRef.current);
+        return cleanup;
+    }, []);
+
     return (
         <>
+            <canvas id="bg" ref={canvasRef}></canvas>
             <Header
                 HomeClick       ={() => homeRef.current.scrollIntoView({ behavior: "smooth" })}
                 EducationClick  ={() => educationRef.current.scrollIntoView({ behavior: "smooth" })}
