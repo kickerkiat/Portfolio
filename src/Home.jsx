@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/immutability */
 import { useState, useEffect, useRef } from "react";
 import Contact from "./Contact"
+import resume from "./assets/JakeLianResume2026.pdf"
 import styles from "./Home.module.css";
 
 const BubbleField = () => {
@@ -173,7 +174,9 @@ export const Home = ({Clicked}) => {
                 <h1>Hi, I'm Jake! 👋</h1>
                 <p>Computer Science Fresh Graduate</p>
                 <div className="buttons">
-                    <button > View My Projects </button>
+                    <button>
+                        <a href={resume} download>Download Resume</a>
+                    </button>
                     <button className="outline" onClick={viewContact}> { visible ? "Hide":"Get In Touch"} </button>
                 </div>
             </div>

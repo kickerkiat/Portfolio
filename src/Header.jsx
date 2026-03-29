@@ -1,9 +1,8 @@
 ﻿import styles from './Header.module.css'
 import { createRef, useState, useEffect , useRef} from 'react'
 
-function Header({ HomeClick, EducationClick, ProjectClick, ExperienceClick, LeadershipClick, ContactMeClick }) {
+function Header({ HomeClick, EducationClick, ProjectClick, ExperienceClick, LeadershipClick, ContactMeClick, active, setActive }) {
 
-    const [active, setActive] = useState("home");
     const [hovered, setHovered] = useState("home");
     const [style, setStyle] = useState({});
     const [hstyle, sethStyle] = useState({});
@@ -19,7 +18,7 @@ function Header({ HomeClick, EducationClick, ProjectClick, ExperienceClick, Lead
         contact: useRef(null),
     };
 
-    
+    // glowing mouse in header
     useEffect(() => {
         const updateMousePos = (e) => {
             if (!headerref.current) return;
@@ -34,6 +33,7 @@ function Header({ HomeClick, EducationClick, ProjectClick, ExperienceClick, Lead
         };
     }, [headerref]);
 
+    // set active when clicked.
     useEffect(() => {
 
         const el = refs[active]?.current;

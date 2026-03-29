@@ -7,12 +7,28 @@ import JobEx from './JobEx'
 import Education from './Education'
 import Achievements from './Achievements'
 import initBackground from "./Graphics/Background01";
+
+function ScrollIndicator() {
+    return (
+        <div className="indicator">
+            <div className="mouse">
+                <div className="wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    );
+}
+
 function App() {
-    const homeRef = useRef(null);
-    const educationRef = useRef(null);
-    const projectRef = useRef(null);
-    const experienceRef = useRef(null);
-    const leadershipRef = useRef(null);
+    
+    const sections = {
+        home: useRef(null),
+        education: useRef(null),
+        project: useRef(null),
+        experience: useRef(null),
+        leadership: useRef(null)
+    };
+    const [active, setActive] = useState("home");
     const [visible, setVisible] = useState(false);
     const canvasRef = useRef(null);
 
@@ -22,27 +38,55 @@ function App() {
         return cleanup;
     }, []);
 
+    // set active when scrolled
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const key = entry.target.dataset.section;
+                        setActive(key);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        Object.entries(sections).forEach(([key, ref]) => {
+            if (ref.current) {
+                ref.current.dataset.section = key;
+                observer.observe(ref.current);
+            }
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
             <canvas id="bg" ref={canvasRef}></canvas>
             <Header
-                HomeClick       ={() => homeRef.current.scrollIntoView({ behavior: "smooth" })}
-                EducationClick  ={() => educationRef.current.scrollIntoView({ behavior: "smooth" })}
-                ProjectClick    ={() => projectRef.current.scrollIntoView({ behavior: "smooth" })}
-                ExperienceClick ={() => experienceRef.current.scrollIntoView({ behavior: "smooth" })}
-                LeadershipClick ={() => leadershipRef.current.scrollIntoView({ behavior: "smooth" })}
-                ContactMeClick  ={() => {
-                    homeRef.current.scrollIntoView({ behavior: "smooth" });
+                HomeClick={() => sections.home.current.scrollIntoView({ behavior: "smooth" })}
+                EducationClick={() => sections.education.current.scrollIntoView({ behavior: "smooth" })}
+                ProjectClick={() => sections.project.current.scrollIntoView({ behavior: "smooth" })}
+                ExperienceClick={() => sections.experience.current.scrollIntoView({ behavior: "smooth" })}
+                LeadershipClick={() => sections.leadership.current.scrollIntoView({ behavior: "smooth" })}
+                ContactMeClick={() => {
+                    sections.home.current.scrollIntoView({ behavior: "smooth" });
                     setVisible(!visible);
                 }}
+                active={active}
+                setActive={setActive}
             ></Header>
+            
             <div className="Container">
-                <div ref={homeRef}><Home Clicked={ visible }></Home></div>
-                <div ref={educationRef}><Education></Education></div>
-                <div ref={projectRef}><Projects></Projects></div>
-                <div ref={experienceRef}><JobEx></JobEx></div>
-                <div ref={leadershipRef}><Achievements></Achievements></div>
+                <div ref={sections.home}><Home Clicked={ visible }></Home></div>
+                <div ref={sections.education}><Education></Education></div>
+                <div ref={sections.project}><Projects></Projects></div>
+                <div ref={sections.experience}><JobEx></JobEx></div>
+                <div ref={sections.leadership}><Achievements></Achievements></div>
             </div>
+            {active == "home" && <ScrollIndicator></ScrollIndicator>}
         </>
     )
 }

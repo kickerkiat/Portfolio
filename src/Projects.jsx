@@ -47,10 +47,10 @@ function ProjectDetails({ p, setSelected }) {
                 {/*{p.Source && <video src={p.Source} controls className={styles.video} />}*/}
                 {p.Source && <iframe className={styles.video}
                     src={p.Source}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>}
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen></iframe>}
                 <div className={styles.paragraphs}>
                     {p.Description.map((d, idx) => {
                         if (d.type === "string") {
