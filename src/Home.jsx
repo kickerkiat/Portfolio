@@ -177,7 +177,7 @@ export const Home = ({Clicked}) => {
                     <button>
                         <a href={resume} download>Download Resume</a>
                     </button>
-                    <button className="outline" onClick={viewContact}> { visible ? "Hide":"Get In Touch"} </button>
+                    <button className="outline frosted" onClick={viewContact}> { visible ? "Hide":"Get In Touch"} </button>
                 </div>
             </div>
             <BubbleField></BubbleField>

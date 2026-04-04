@@ -48,7 +48,7 @@ function Section({ title, items }) {
             <h1 className={styles.sectiontitle}>{title}</h1>
             <div className={styles.cardgrid}>
                 {items.map((item, index) => (
-                    <div className={styles.misccard} key={index}>
+                    <div className={styles.misccard + " frosted"} key={index}>
                         <h2>{item.title}</h2>
                         {item.period && <h3 className={styles.meta}>{item.period}</h3>}
                         {item.desc && <p className={styles.desc}>{item.desc}</p>}

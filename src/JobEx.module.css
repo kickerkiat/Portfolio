@@ -40,8 +40,6 @@
 
 /* Glass card */
 .card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
     padding: 28px;
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.08);

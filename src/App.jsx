@@ -28,7 +28,7 @@ function App() {
         experience: useRef(null),
         leadership: useRef(null)
     };
-    const [active, setActive] = useState("home");
+    const [active, setActive] = useState(null);
     const [visible, setVisible] = useState(false);
     const canvasRef = useRef(null);
 
@@ -45,6 +45,7 @@ function App() {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const key = entry.target.dataset.section;
+                        if (key == "home") { setActive("contact");  return;}
                         setActive(key);
                     }
                 });

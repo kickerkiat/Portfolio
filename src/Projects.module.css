@@ -12,7 +12,6 @@
     font-size: 48px;
     margin-bottom: 10px;
     letter-spacing: 2px;
-    overflow-x: hidden;
     text-wrap: nowrap;
 }
 
@@ -81,7 +80,6 @@ img {
     align-items: center;
     border: 1px solid #c0c0c050;
     border-radius: 10px;
-    background-color: #c0c0c010;
     text-shadow: 0 1px 0 navy;
     padding: 6px;
     transition: 0.3s;
@@ -92,6 +90,11 @@ img {
     transform: translateY(-6px);
     border-color: #2d5bff;
     box-shadow: 0 10px 40px #2d5bff30;
+}
+
+h3 {
+    font-size:2rem;
+    flex-wrap: wrap;
 }
 
 .buttoncontainer {
@@ -150,8 +153,6 @@ button.outline {
     width: 90%;
     height: 85%;
     border-radius: 15px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,.1);
     position: relative;
     display:flex;

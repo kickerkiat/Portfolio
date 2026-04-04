@@ -19,7 +19,7 @@ export default function ExperiencePage() {
                     <div className={ styles.timelineitem} key={i}>
                         <div className={ styles.timelinedot } />
 
-                        <div className={ styles.card }>
+                        <div className={ styles.card + " frosted" }>
                             <h2>{exp.role}</h2>
                             <h3>{exp.company}</h3>
                             <p className={ styles.period }>{exp.period}</p>

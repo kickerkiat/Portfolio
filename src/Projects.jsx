@@ -14,9 +14,9 @@ import PowerMgmt from './assets/Power.png';
 function Card({ Project, setSelected }) {
 
     return (
-        <div key={Project.id} className={styles.card}  >
-            <h3>{Project.Title}</h3>
+        <div key={Project.id} className={styles.card + " frosted"}  >
             <img src={Project.Thumbnail} onClick={() => setSelected(Project)} alt="Project" />
+            <h3>{Project.Title}</h3>
             <div className={styles.buttoncontainer}>
                 <button onClick={() => setSelected(Project)} > Project Details </button>
                 {Project.Download &&
@@ -35,7 +35,7 @@ function Card({ Project, setSelected }) {
 function ProjectDetails({ p, setSelected }) {
     return (
         <div className={styles.overlay} >
-            <div className={styles.modal} onClick={(e) => e.stopPropagation()} >
+            <div className={styles.modal + " frosted"} onClick={(e) => e.stopPropagation()} >
                 <div className={styles.sticky}>
                     <button
                         className={styles.close}

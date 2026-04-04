@@ -3,7 +3,7 @@ import { createRef, useState, useEffect , useRef} from 'react'
 
 function Header({ HomeClick, EducationClick, ProjectClick, ExperienceClick, LeadershipClick, ContactMeClick, active, setActive }) {
 
-    const [hovered, setHovered] = useState("home");
+    const [hovered, setHovered] = useState(null);
     const [style, setStyle] = useState({});
     const [hstyle, sethStyle] = useState({});
     const [open, setOpen] = useState(false);
@@ -62,9 +62,8 @@ function Header({ HomeClick, EducationClick, ProjectClick, ExperienceClick, Lead
             <h2
                 ref={refs.home}
                 className={styles.topbartext, styles.jake}
-                onClick={() => { HomeClick(); setActive("home"); } }
-                onMouseEnter={() => setHovered("home")}
-                onMouseLeave={() => setHovered(null)}
+                onClick={() => { HomeClick(); setActive("contact"); } }
+                
             >Jake Lian</h2>
 
             <div className={styles.gap}></div>
@@ -101,7 +100,7 @@ function Header({ HomeClick, EducationClick, ProjectClick, ExperienceClick, Lead
                 > Leadership </a>
                 <a ref={refs.contact}
                     className={styles.topbartext} 
-                    onClick={() => { if (active != "contact") {ContactMeClick(); setActive("contact")}}}
+                    onClick={() => {ContactMeClick(); setActive("contact")}}
                     onMouseEnter={() => setHovered("contact")}
                     onMouseLeave={() => setHovered(null)}
                 > Contact Me </a>
